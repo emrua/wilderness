@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class NewBehaviourScript : MonoBehaviour
+using TMPro;
+ 
+public class InteractableObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string ItemName;
+ 
+    public string GetItemName()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return ItemName;
     }
 }
