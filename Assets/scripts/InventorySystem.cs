@@ -120,5 +120,22 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
-    
+
+    public void RecalculateList()
+    {
+        itemList.Clear();
+
+        foreach(GameObject slot in slotList)
+        {
+            if(slot.transform.childCount > 0)
+            {
+                string name = slot.transform.GetChild(0).name;
+                string str2 = "(Clone)";
+                string result = name.Replace(str2, "");
+
+                itemList.Add(result);
+            }
+        }
+    }
+
 }
