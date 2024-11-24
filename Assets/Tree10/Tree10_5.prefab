@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2355092}
   - component: {fileID: -4815840206271236844}
   - component: {fileID: -6452485173855245904}
-  - component: {fileID: -1944384568918196301}
   m_Layer: 0
   m_Name: Tree10_5
   m_TagString: Untagged
@@ -110,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemName: Tree
+  PlayerInRange: 0
 --- !u!136 &-6452485173855245904
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -129,33 +129,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6.4545126
+  m_Radius: 2.1201963
   m_Height: 15.813006
   m_Direction: 1
-  m_Center: {x: 0.9036243, y: 7.906503, z: 4.183118}
---- !u!136 &-1944384568918196301
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109824}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 6.4545126
-  m_Height: 15.813006
-  m_Direction: 1
-  m_Center: {x: 0.9036243, y: 7.906503, z: 4.183118}
+  m_Center: {x: 0.90362453, y: 7.906503, z: 0}
 --- !u!21 &2168896
 Material:
   serializedVersion: 8
