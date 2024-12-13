@@ -28,7 +28,11 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
  
     public void OnBeginDrag(PointerEventData eventData)
     {
- 
+        if (eventData.button != PointerEventData.InputButton.Left)
+    {
+        Debug.Log("Dragging is restricted to the left mouse button.");
+        return;
+    }
         Debug.Log("OnBeginDrag");
         canvasGroup.alpha = .6f;
         //So the ray cast will ignore the item itself.

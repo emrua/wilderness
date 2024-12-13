@@ -19,7 +19,7 @@ public class AI_Movement : MonoBehaviour
  
     int WalkDirection;
  
-    public bool isWalking;
+    public bool WalkForward;
  
     // Start is called before the first frame update
     void Start()
@@ -40,7 +40,7 @@ public class AI_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isWalking)
+        if (WalkForward)
         {
  
             animator.SetBool("isRunning", true);
@@ -70,7 +70,7 @@ public class AI_Movement : MonoBehaviour
             if (walkCounter <= 0)
             {
                 stopPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                isWalking = false;
+                WalkForward = false;
                 //stop movement
                 transform.position = stopPosition;
                 animator.SetBool("isRunning", false);
@@ -97,7 +97,7 @@ public class AI_Movement : MonoBehaviour
     {
         WalkDirection = Random.Range(0, 4);
  
-        isWalking = true;
+        WalkForward = true;
         walkCounter = walkTime;
     }
 }

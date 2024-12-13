@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class EquipSystem : MonoBehaviour
 {
     public static EquipSystem instance {get; set;}
-
 
     // UI //
 
     public GameObject quickSlotsPanel;
 
     public List<GameObject> quickSlotsList = new List<GameObject>();
-
     public List<string> itemList = new List<string>();
+
+
 
 
     private void Awake()
@@ -30,10 +31,13 @@ public class EquipSystem : MonoBehaviour
     }
 
 
+
+
     private void Start()
     {
         PopulateSlotList();
     }
+
 
     private void PopulateSlotList()
     {
@@ -46,19 +50,22 @@ public class EquipSystem : MonoBehaviour
         }
     }
 
+
     public void AddToQuickSlots(GameObject itemToEquip)
     {
         //Find next free slot
         GameObject availableSlot = FindNextEmptySlot();
         // Set transform of project
-        itemToEquip.transform.SetParent(availableSlot.transform, false); 
+        itemToEquip.transform.SetParent(availableSlot.transform, false);
         // Getting clean name
         string cleanName = itemToEquip.name.Replace("(Clone)", "");
         // Add to list
         itemList.Add(cleanName);
 
+
         InventorySystem.Instance.RecalculateList();
     }
+
 
     private GameObject FindNextEmptySlot()
     {
@@ -72,9 +79,11 @@ public class EquipSystem : MonoBehaviour
         return new GameObject();
     }
 
+
     public bool CheckIfFull()
     {
         int counter = 0;
+
 
         foreach(GameObject slot in quickSlotsList)
         {
@@ -83,6 +92,7 @@ public class EquipSystem : MonoBehaviour
                 counter += 1;
             }
         }
+
 
         if (counter == 7)
         {
