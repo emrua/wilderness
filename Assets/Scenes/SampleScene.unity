@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   caloriesCounter: {fileID: 808436034}
-  playerState: {fileID: 436732040}
+  playerState: {fileID: 772014488}
 --- !u!1001 &75173122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2166,8 +2166,6 @@ MonoBehaviour:
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 128
-  gridSizeX: 0
-  gridSizeY: 0
 --- !u!114 &283183641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2197,7 +2195,13 @@ MonoBehaviour:
   target: {fileID: 772014492}
   speed: 5
   attackRange: 2
-  animator: {fileID: 0}
+  animator: {fileID: 283183645}
+  attackDamage: 10
+--- !u!95 &283183645 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3734775969355451150, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+  m_PrefabInstance: {fileID: 283183637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &287815250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5114,6 +5118,7 @@ GameObject:
   - component: {fileID: 772014491}
   - component: {fileID: 772014490}
   - component: {fileID: 772014489}
+  - component: {fileID: 772014493}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5199,6 +5204,27 @@ Transform:
   - {fileID: 1266388720}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &772014493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772014488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae3cd6021a2906469a714d04ea8df82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 0
+  currentCalories: 0
+  maxCalories: 0
+  distanceTravelled: 0
+  playerBody: {fileID: 772014488}
+  currentHydration: 0
+  maxHydration: 0
+  isHydrationActive: 0
 --- !u!1 &808436032
 GameObject:
   m_ObjectHideFlags: 0
@@ -7570,7 +7596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1195636285
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11399,7 +11425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthCounter: {fileID: 1189178495}
-  playerState: {fileID: 436732040}
+  playerState: {fileID: 772014488}
 --- !u!4 &1819062999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2820590743937261372, guid: 2e12139c0ee03c44f8538d5e505a0942, type: 3}
@@ -11513,7 +11539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hydrationCounter: {fileID: 1929702761}
-  playerState: {fileID: 436732040}
+  playerState: {fileID: 772014488}
 --- !u!1001 &1864023016
 PrefabInstance:
   m_ObjectHideFlags: 0
